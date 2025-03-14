@@ -1,0 +1,12 @@
+delta MediumPowerGun {
+	modifies jab.module.Gun {
+		adds import jab.module.Gun;
+		adds import robocode.Rules;
+		adds import robocode.Bullet;
+
+		modifies fire() {
+			Bullet b = bot.setFire(5);
+			bot.registerBullet(b);
+		}
+	}
+}

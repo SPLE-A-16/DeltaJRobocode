@@ -1,0 +1,14 @@
+NoMovement:
+<decore/Quiet.decore>
+
+SpinningRadar:
+<decore/SpinningRadar.decore>
+
+LowPowerGun:
+<decore/LowPowerGun.decore>
+
+MediumPowerGun:
+<decore/MediumPowerGun.decore>
+
+HighPowerGun:
+<decore/HighPowerGun.decore>
