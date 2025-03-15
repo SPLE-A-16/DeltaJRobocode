@@ -1,0 +1,5 @@
+ configuration delta "NearestEnemySelection"
+	dialect <http://www.emftext.org/java>
+		{
+	}
+	

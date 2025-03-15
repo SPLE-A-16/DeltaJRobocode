@@ -28,3 +28,12 @@ LinearTargeting:
 
 OscillatingTargeting:
 <decore/OscillatingTargeting.decore>
+
+AdvancedDodging:
+<decore/AdvancedDodging.decore>
+
+BasicDodging:
+<decore/BasicDodging.decore>
+
+RandomDodging:
+<decore/RandomDodging.decore>

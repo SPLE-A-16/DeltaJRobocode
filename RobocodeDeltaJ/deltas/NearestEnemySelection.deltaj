@@ -1,0 +1,9 @@
+delta NearestEnemySelection {
+	modifies jab.module.EnemySelection{
+		modifies selectEnemy(){
+			bot.enemy = bot.getEnemies().stream()
+				.min((e1, e2) -> Double.compare(bot.getDistance(e1), bot.getDistance(e2)))
+				.orElse(null);
+		}
+	}
+}

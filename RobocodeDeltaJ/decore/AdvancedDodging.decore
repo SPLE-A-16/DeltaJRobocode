@@ -1,0 +1,5 @@
+ configuration delta "AdvancedDodging"
+	dialect <http://www.emftext.org/java>
+		{
+	}
+	

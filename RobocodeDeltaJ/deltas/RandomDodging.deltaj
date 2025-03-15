@@ -1,0 +1,15 @@
+delta RandomDodging {
+	modifies jab.module.Movement{
+			adds import robocode.ScannedRobotEvent;
+			adds import java.util.Random;
+			
+			modifies onScannedRobot(ScannedRobotEvent e){
+				Random rand = new Random();
+				if (e.getEnergy() < bot.lastEnemyEnergy) {
+					bot.setTurnRight(rand.nextInt(180) - 90);
+					bot.setAhead(rand.nextInt(150) + 50);
+				}
+				bot.lastEnemyEnergy = e.getEnergy();
+			}
+		}
+}
