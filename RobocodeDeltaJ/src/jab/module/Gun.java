@@ -3,6 +3,9 @@ package jab.module;
 import jab.module.Gun;
 import robocode.Rules;
 import robocode.Bullet;
+import jab.module.Gun;
+import robocode.Rules;
+import robocode.Bullet;
 
 /**
  * Gun

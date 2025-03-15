@@ -1,0 +1,13 @@
+delta CircularMovement {
+	modifies jab.module.Movement{
+	adds import robocode.AdvancedRobot;
+	adds import robocode.Robot;
+	
+		modifies move(){
+			if (bot.getDistanceRemaining() == 0) {
+				bot.setTurnRight(30);
+				bot.setAhead(100);
+			}
+		}
+	}
+}

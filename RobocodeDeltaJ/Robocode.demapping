@@ -1,6 +1,13 @@
 NoMovement:
 <decore/Quiet.decore>
 
+CircularMovement:
+<decore/CircularMovement.decore>
+
+RandomMovement:
+<decore/RandomMovement.decore>
+
+
 SpinningRadar:
 <decore/SpinningRadar.decore>
 

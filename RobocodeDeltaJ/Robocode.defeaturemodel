@@ -9,8 +9,10 @@
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Movement">
-        <groups maxCardinality="1">
+        <groups minCardinality="1" maxCardinality="3">
           <features maxCardinality="1" name="NoMovement"/>
+          <features maxCardinality="1" name="CircularMovement"/>
+          <features maxCardinality="1" name="RandomMovement"/>
         </groups>
       </features>
       <features minCardinality="1" maxCardinality="1" name="Gun">

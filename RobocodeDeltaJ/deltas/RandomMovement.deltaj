@@ -1,0 +1,13 @@
+delta RandomMovement {
+	modifies jab.module.Movement{
+		adds import java.util.Random;
+		
+		modifies move(){
+			Random rand = new Random();
+			if (bot.getDistanceRemaining() == 0) {
+				bot.setAhead((rand.nextBoolean() ? 1 : -1) * (50 + rand.nextInt(150)));
+				bot.setTurnRight((rand.nextDouble() - 0.5) * 180);
+			}
+		}
+	}
+}

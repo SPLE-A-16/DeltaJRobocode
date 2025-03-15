@@ -1,6 +1,7 @@
 package jab.module;
 
 import robocode.util.Utils;
+import robocode.util.Utils;
 
 /**
  * Targeting

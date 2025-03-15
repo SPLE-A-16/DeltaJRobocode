@@ -1,0 +1,5 @@
+ configuration delta "CircularMovement"
+	dialect <http://www.emftext.org/java>
+		{
+	}
+	
