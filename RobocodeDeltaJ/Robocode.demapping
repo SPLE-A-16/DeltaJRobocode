@@ -12,3 +12,12 @@ MediumPowerGun:
 
 HighPowerGun:
 <decore/HighPowerGun.decore>
+
+RoundedTargeting:
+<decore/RoundedTargeting.decore>
+
+LinearTargeting:
+<decore/LinearTargeting.decore>
+
+OscillatingTargeting:
+<decore/OscillatingTargeting.decore>

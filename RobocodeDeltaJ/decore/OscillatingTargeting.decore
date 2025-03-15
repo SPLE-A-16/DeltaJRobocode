@@ -1,0 +1,20 @@
+ configuration delta "OscillatingTargeting"
+	dialect <http://www.emftext.org/java>
+		modifies <../src/jab/module/Targeting.java>
+		{
+	addClassifierImport(<class:jab.module.Targeting>, "robocode.util.Utils");
+	addClassifierImport(<class:jab.module.Targeting>, "java.util.Random");
+	modifyStatementListContainer(<method:jab.module.Targeting.target()>, "public void target() {
+			if (bot.enemy != null) {
+				Random rand = new Random();
+				double offsetAngle = (rand.nextDouble() - 0.5) * Math.PI / 6; // Small oscillation
+
+				double enemyX = bot.enemy.x;
+				double enemyY = bot.enemy.y;
+				double theta = Utils.normalAbsoluteAngle(Math.atan2(enemyX - bot.getX(), enemyY - bot.getY()) + offsetAngle);
+				bot.setTurnGunRightRadians(Utils.normalRelativeAngle(theta - bot.getGunHeadingRadians()));
+			}
+	}
+", "OscillatingTargeting", false);
+	}
+	

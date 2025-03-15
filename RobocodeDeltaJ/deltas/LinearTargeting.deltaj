@@ -1,0 +1,14 @@
+delta LinearTargeting {
+	modifies jab.module.Targeting{
+		adds import robocode.util.Utils;
+		
+		modifies target(){
+			if (bot.enemy != null) {
+				double enemyX = bot.enemy.x;
+				double enemyY = bot.enemy.y;
+				double theta = Utils.normalAbsoluteAngle(Math.atan2(enemyX - bot.getX(), enemyY - bot.getY()));
+				bot.setTurnGunRightRadians(Utils.normalRelativeAngle(theta - bot.getGunHeadingRadians()));
+			}
+		}
+	}
+}

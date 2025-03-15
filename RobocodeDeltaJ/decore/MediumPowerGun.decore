@@ -3,11 +3,11 @@
 		modifies <../src/jab/module/Gun.java>
 		{
 	addClassifierImport(<class:jab.module.Gun>, "jab.module.Gun");
-	addClassifierImport(<class:jab.module.Gun>, "jab.module.Module");
 	addClassifierImport(<class:jab.module.Gun>, "robocode.Rules");
 	addClassifierImport(<class:jab.module.Gun>, "robocode.Bullet");
 	modifyStatementListContainer(<method:jab.module.Gun.fire()>, "public void fire() {
-			bot.registerBullet(bot.setFireBullet(5));
+			Bullet b = bot.setFire(5);
+			bot.registerBullet(b);
 	}
 ", "MediumPowerGun", false);
 	}

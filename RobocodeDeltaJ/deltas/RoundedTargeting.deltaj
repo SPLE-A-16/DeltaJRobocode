@@ -1,0 +1,20 @@
+delta RoundedTargeting {
+modifies jab.module.Targeting{
+		adds import robocode.util.Utils;
+		
+		modifies target(){
+			if (bot.enemy != null) {
+				double enemyX = bot.enemy.x;
+				double enemyY = bot.enemy.y;
+				double enemyHeading = bot.enemy.headingRadians;
+				double enemyVelocity = bot.enemy.velocity;
+				double predictionTime = bot.getDistanceRemaining() / enemyVelocity;
+				double predictedX = enemyX + Math.sin(enemyHeading) * enemyVelocity * predictionTime;
+				double predictedY = enemyY + Math.cos(enemyHeading) * enemyVelocity * predictionTime;
+
+				double theta = Utils.normalAbsoluteAngle(Math.atan2(predictedX - bot.getX(), predictedY - bot.getY()));
+				bot.setTurnGunRightRadians(Utils.normalRelativeAngle(theta - bot.getGunHeadingRadians()));
+			}
+		}
+	}
+}
